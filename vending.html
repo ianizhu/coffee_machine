@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Coffe Machine</title>
+    <script src="https://kit.fontawesome.com/2f982d2680.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles_vendind.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="coffee-header d-flex">
+            <div class="coffee_main d-flex col-6">        
+                <div class="coffee_block d-flex flex-column col-2">
+                    <div class="coffee-header__buttons btn btn-info"onclick="getCoffee(158, 'Эспрессо')"></div>
+                    <span class="coffee_name">Эспрессо </span>
+                    <span class="coffee_price">158&#8381</span>
+                </div>
+
+                <div class="coffee_block d-flex flex-column col-2">
+                    <div class="coffee-header__buttons btn btn-info" onclick="getCoffee(210, 'Капучино')"></div>
+                    <span class="coffee_name">Капучно</span>
+                    <span class="coffee_price"> 210&#8381</span>
+                </div>
+
+                <div class="coffee_block d-flex flex-column col-2">
+                    <div class="coffee-header__buttons btn btn-info" onclick="getCoffee(250, 'Латте')"></div>
+                    <span class="coffee_name">Латте </span>
+                    <span class="coffee_price">250&#8381</span>
+                </div>
+
+                <div class="coffee_block d-flex flex-column col-2">
+                    <div class="coffee-header__buttons btn btn-info" onclick="getCoffee(300, 'Раф')"></div>
+                    <span class="coffee_name raf">Раф </span>
+                    <span class="coffee_price">300&#8381</span>
+                </div>
+
+                <div class="coffee_block d-flex flex-column col-2">
+                    <div class="coffee-header__buttons btn btn-info" onclick="getCoffee(80, 'Чай')"></div>
+                    <span class="coffee_name tea">Чай</span>
+                    <span class="coffee_price">80&#8381</span>
+                </div>
+
+                <div class="container col-5 display_part">
+                    <div id="display"></div>
+                        <p id="displayInfo">Внесите деньги <i class="fa-solid fa-coins"></i></p>
+                        <p id="balance">Баланс: 0 <i class="fa-solid fa-piggy-bank"></i><input type="text" id="money" placeholder="Внесите деньги" hidden/></p>
+                        <div class="progress" hidden>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+                            </div>
+                    </div>
+                    <div class="container col-3 bill-acc">
+                        <img src="images/bill_acc.png" alt="bill_acc" width="90%">
+                    </div>
+                    <div class="container change__box col-4" id="changeBox">
+                    </div>
+                    <div class="container col-2 change-btn__container">
+                        <button class="btn btn-info change__btn" id="changeBtn" onclick="getChange(money.value)" disabled>Забрать сдачу</button> 
+                    </div>
+                </div>
+            </div>  
+            </div>   
+        </div>    
+        <div class="coffee-medium col-10 d-flex">
+            <div class="coffe-medium__exit"></div>
+            <div class="coffee-medium__liquid" id="liquidAnimation"></div>
+        </div>
+            <div class="coffee-medium__cup"></div>
+        
+            <div class="coffee-footer"></div>
+        </div>
+    </div>
+
+    <div class="container wallet">
+        <div class="rectangle">
+            <div class="rectangle__front"></div>
+            <div class="closure"></div>
+            <div class="money">
+                <img src="images/50rub.jpg" alt="50 рублей" class="banknotes" data-banknote-value="50" width="45%">
+                <img src="images/100rub.jpg" alt="100 рублей" class="banknotes" data-banknote-value="100" width="45%">
+                <img src="images/200rub.jpg" alt="200 рублей" class="banknotes" data-banknote-value="200" width="45%">
+                <img src="images/500rub.jpg" alt="500 рублей" class="banknotes" data-banknote-value="500" width="45%">
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+        <script src="main_vanding.js"></script>
+    </body>
+</html>
